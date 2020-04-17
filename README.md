@@ -4,8 +4,8 @@
 
 In the working directory of your python script  
 ```bash
-mkdir acad_patients
-cd acad_patients
+mkdir acad_patents
+cd acad_patents
 git init
 git remote add origin 'https://www.github.com/saadejazz/acad_patents'
 git pull origin master
@@ -18,7 +18,7 @@ python -m pip install requests bs4
 ## Google scholar  
 **Code:**  
 ```python
-from acad_patients.academics_and_patents import scholar
+from acad_patents.academics_and_patents import scholar
 
 query = "black matter"
 results = scholar(query)
@@ -42,7 +42,7 @@ results = scholar(query)
 ## Google Patents  
 **Code:**  
 ```python
-from acad_patients.academics_and_patents import patents
+from acad_patents.academics_and_patents import patents
 
 query = "broom"
 results = patents(query)
