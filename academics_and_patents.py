@@ -94,7 +94,13 @@ def patents(query):
         }
         a = one.find('a')
         if a:
-            result['title'] = a.text
+            b = a.find(True, {'class': "LC20lb DKV0Md"})
+            if b:
+                result['title'] = b.text
+            else:
+                b = a.find('h3')
+                if b:
+                    result['title'] = b.text
             result['link'] = a.get('href', '')
         a = one.find('cite')
         if a:
